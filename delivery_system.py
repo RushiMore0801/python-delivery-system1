@@ -2,9 +2,6 @@ import json
 import math
 
 
-# -----------------------------
-# Utility Function
-# -----------------------------
 def euclidean_distance(point1, point2):
     """
     Calculate Euclidean distance between two points.
@@ -13,9 +10,6 @@ def euclidean_distance(point1, point2):
                      (point1[1] - point2[1]) ** 2)
 
 
-# -----------------------------
-# Load JSON Data
-# -----------------------------
 def load_data(file_name):
     """
     Load JSON file manually.
@@ -25,9 +19,7 @@ def load_data(file_name):
     return data
 
 
-# -----------------------------
 # Find Nearest Agent
-# -----------------------------
 def find_nearest_agent(warehouse_location, agents):
     """
     Find nearest agent to a warehouse.
@@ -45,9 +37,8 @@ def find_nearest_agent(warehouse_location, agents):
     return nearest_agent, minimum_distance
 
 
-# -----------------------------
+
 # Simulate Deliveries
-# -----------------------------
 def simulate_delivery(data):
 
     # Convert warehouses into dictionary
@@ -123,17 +114,13 @@ def simulate_delivery(data):
     return report
 
 
-# -----------------------------
 # Save Report
-# -----------------------------
 def save_report(report, output_file="report.json"):
     with open(output_file, "w") as file:
         json.dump(report, file, indent=4)
 
 
-# -----------------------------
-# Main Function
-# -----------------------------
+
 def main():
 
     # Full path of JSON file
@@ -156,8 +143,6 @@ def main():
 
     print("\nReport saved to report.json")
 
-# -----------------------------
-# Run Program
-# -----------------------------
+
 if __name__ == "__main__":
     main()
